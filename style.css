@@ -111,9 +111,9 @@ body {
 }
 
 .hero-text {
-    flex: 1;
-    max-width: 550px;
-    color: var(--secondary-color); /* Ajustado para contraste com fundo claro */
+    flex: 1.2; /* Damos um pouco mais de espaço para o texto */
+    max-width: 560px; /* Limitamos a largura máxima do texto */
+    color: var(--secondary-color);
 }
 
 .subheading {
@@ -160,26 +160,19 @@ body {
 }
 
 .hero-image-right {
-    flex: 1;
+    flex: 0.8; /* A imagem ocupará uma proporção menor do espaço */
     display: flex;
-    justify-content: flex-end; /* Alinha a imagem à direita */
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 50%; /* Ocupa metade da largura para corresponder ao gradiente */
-    z-index: 1; /* Garante que o texto fique por cima */
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-image-right img {
-    height: 100%; /* Preenche a altura da seção */
-    width: 100%;
-    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
-    object-position: center; /* Ajusta a posição da imagem no container */
-    max-height: 550px; /* Limita a altura máxima para não ficar muito grande em telas maiores */
-    border-radius: 0; /* Remove qualquer borda */
+    width: 120%;
+    max-width: 400px; /* <--- CONTROLE O TAMANHO MÁXIMO DA IMAGEM AQUI */
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px; /* Adiciona uma leve borda arredondada */
 }
-
 
 /* Sections */
 section {
@@ -369,7 +362,7 @@ section {
         height: 400px; /* Altura fixa para a imagem em telas menores */
     }
     .hero-image-right img {
-        width: auto;
+        width: 110;
         max-width: 100%;
         height: 100%;
         object-fit: contain; /* Ajusta a imagem para caber sem cortar */
